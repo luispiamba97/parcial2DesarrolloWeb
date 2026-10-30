@@ -4,67 +4,193 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Disney - Educational Project</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-
-  <nav class="navbar">
-    <div class="nav-left">
-      <img src="logo.png" alt="Disney Logo" class="logo">
-      <ul class="nav-links">
-        <li><a href="#">DISNEY+</a></li>
-        <li><a href="#parks-and-travel">PARKS & TRAVEL</a></li>
-        <li><a href="#movies">MOVIES</a></li>
-        <li><a href="#shop">SHOP</a></li>
-        <li><a href="#more">MORE</a></li>
-      </ul>
-    </div>
-    <div class="nav-right">
-      <a href="#" class="login-btn">LOG IN</a>
-      <div class="search-container">
-        <input type="text" placeholder="Search" class="search-input">
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="../images/logo.png" alt="Disney Logo" class="logo">
+        <ul class="nav-links">
+          <li><a href="#">DISNEY+</a></li>
+          <li><a href="#parks-and-travel">PARKS & TRAVEL</a></li>
+          <li><a href="#movies">MOVIES</a></li>
+          <li><a href="#shop">SHOP</a></li>
+          <li><a href="#more">MORE</a></li>
+        </ul>
       </div>
-    </div>
-  </nav>
+      <div class="nav-right">
+        <a href="#" class="login-btn">LOG IN</a>
+        <div class="search-box">
+          <input type="text" placeholder="Search" class="search-input">
+        </div>
+      </div>
+    </nav>
+  </header>
 
-  <section class="banner" style="background-image: url('banner-background.jpg');">
+  <!-- BANNER / HERO SECTION -->
+  <section class="banner" style="background-image: url('../images/banner-background.png');">
     <div class="banner-content">
-      <span class="banner-subtitle">Experience Snow White, now streaming in theaters!</span>
+      <h1 class="banner-title">SnowWhite</h1>
+      <p class="banner-subtitle">Experience Snow White, now streaming in theaters!</p>
       <div class="banner-buttons">
-        <a href="#" class="btn primary">Get Early Access</a>
-        <a href="#" class="btn secondary">Learn More</a>
+        <a href="#" class="btn btn-primary">Get Early Access</a>
+        <a href="#" class="btn btn-secondary">Learn More</a>
       </div>
     </div>
   </section>
 
   <main>
- 
-    <section id="shop">
-      <!-- 4 tarjetas con fondo morado -->
+    <!-- SHOP SECTION (Fondo Morado) -->
+    <section id="shop" class="shop-section">
+      <div class="cards-grid-4">
+        <article class="card shop-card">
+          <img src="../images/shop-image-1.png" alt="Shop item 1">
+          <div class="card-body">
+            <h3>Behind-the-Scenes Music</h3>
+            <p>Stream the official soundtrack and get a glimpse into the musical magic of Snow White.</p>
+            <a href="#" class="card-link">LISTEN NOW</a>
+          </div>
+        </article>
+        <article class="card shop-card">
+          <img src="../images/shop-image-2.png" alt="Shop item 2">
+          <div class="card-body">
+            <h3>Costume & Prop Exhibition</h3>
+            <p>Explore the intricate design and craftsmanship behind the movie's iconic costumes.</p>
+            <a href="#" class="card-link">EXPLORE MORE</a>
+          </div>
+        </article>
+        <article class="card shop-card">
+          <img src="../images/shop-image-3.png" alt="Shop item 3">
+          <div class="card-body">
+            <h3>Disney Store</h3>
+            <p>Bring home the magic with official Snow White dolls, apparel and collectibles.</p>
+            <a href="#" class="card-link">SHOP NOW</a>
+          </div>
+        </article>
+        <article class="card shop-card">
+          <img src="../images/shop-image-4.png" alt="Shop item 4">
+          <div class="card-body">
+            <h3>Window of the Enchanted Forest</h3>
+            <p>Step inside the fairy tale experience and discover exclusive artwork prints.</p>
+            <a href="#" class="card-link">BUY NOW</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="disney-plus">
-      <!-- Tarjetas anchas de Moana 2, Daredevil, etc. -->
+    <!-- EXPLORE MORE DISNEY+ SECTION (Fondo Azul Oscuro) -->
+    <section id="disney-plus" class="disney-plus-section">
+      <h2 class="section-title">Explore More Disney+</h2>
+      <div class="cards-grid-3">
+        <article class="card-wide">
+          <img src="../images/disney-plus-1.png" alt="Moana 2">
+          <div class="card-wide-body">
+            <h3>MOANA 2</h3>
+            <p>Stream it now on Disney+</p>
+            <a href="#" class="card-link">WATCH NOW ON DISNEY+</a>
+          </div>
+        </article>
+        <article class="card-wide">
+          <img src="../images/disney-plus-2.png" alt="Daredevil Born Again">
+          <div class="card-wide-body">
+            <h3>DAREDEVIL: BORN AGAIN</h3>
+            <p>Marvel Television streams exclusively on Disney+</p>
+            <a href="#" class="card-link">STREAM NOW</a>
+          </div>
+        </article>
+        <article class="card-wide">
+          <img src="../images/disney-plus-3.png" alt="Next on Disney+">
+          <div class="card-wide-body">
+            <h3>NEXT ON DISNEY+</h3>
+            <p>Coming soon to the platform</p>
+            <a href="#" class="card-link">LEARN MORE</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="movies">
-      <!-- Pósters verticales de Coming Soon -->
+    <!-- COMING SOON TO DISNEY+ (Fondo Blanco/Claro) -->
+    <section id="movies" class="movies-section">
+      <h2 class="section-title dark-text">Coming Soon to Disney+</h2>
+      <div class="cards-grid-5">
+        <article class="movie-card">
+          <img src="../images/movies-1.jpeg" alt="Alexander">
+          <p class="movie-title">Alexander and the Terrible, Horrible, No Good, Very Bad Road Trip</p>
+          <span class="movie-date">Streaming March 28</span>
+        </article>
+        <article class="movie-card">
+          <img src="../images/movies-2.jpeg" alt="Andor Season 2">
+          <p class="movie-title">Andor Season 2</p>
+          <span class="movie-date">Streaming April 22</span>
+        </article>
+        <article class="movie-card">
+          <img src="../images/movies-3.jpeg" alt="Ironheart">
+          <p class="movie-title">Ironheart</p>
+          <span class="movie-date">Streaming June 24</span>
+        </article>
+        <article class="movie-card">
+          <img src="../images/movies-4.jpeg" alt="Percy Jackson">
+          <p class="movie-title">Percy Jackson and the Olympians Season 2</p>
+          <span class="movie-date">Coming Soon</span>
+        </article>
+        <article class="movie-card">
+          <img src="../images/movies-5.jpeg" alt="The Doonies">
+          <p class="movie-title">The Doonies</p>
+          <span class="movie-date">Coming Soon</span>
+        </article>
+      </div>
     </section>
 
-    <section id="parks-and-travel">
-      <!-- Tarjetas horizontales de Disneyland -->
+    <!-- VACATION WITH DISNEY PARKS -->
+    <section id="parks-and-travel" class="parks-section">
+      <h2 class="section-title dark-text">Vacation with Disney Parks</h2>
+      <div class="cards-grid-2">
+        <article class="park-card" style="background-image: url('../images/disney-parks-1.png');">
+          <div class="park-content">
+            <h3>Disneyland Resort</h3>
+            <p>Stay and Play with special room & ticket packages at the Disneyland Resort.</p>
+            <a href="#" class="btn-text">LEARN MORE</a>
+          </div>
+        </article>
+        <article class="park-card" style="background-image: url('../images/disney-parks-2.png');">
+          <div class="park-content">
+            <h3>Disneyland Park</h3>
+            <p>Discover and share magic at Disneyland! Enjoy magical moments during the Disneyland resort anniversary celebration.</p>
+            <a href="#" class="btn-text">LEARN MORE</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-  
-    <section id="more" style="background-image: url('more-background.jpg');">
-      <!-- Collage de tarjetas de crédito y texto de ofertas -->
+    <!-- MORE / GET MORE DISNEY EVERY DAY (Fondo Celeste) -->
+    <section id="more" class="more-section" style="background-image: url('../images/more-background.jpeg');">
+      <div class="more-container">
+        <div class="more-left-space"></div>
+        <div class="more-content">
+          <h2>GET MORE DISNEY EVERY DAY</h2>
+          <div class="offer-block">
+            <h4>Special Offer</h4>
+            <p>Earn a $400 Statement Credit</p>
+            <span class="offer-sub">Plus 5% back on card purchases on Disney.</span>
+          </div>
+          <div class="offer-block">
+            <h4>Special Vacation Financing</h4>
+            <p>Enjoy 0% promo APR for 6 months on select Disney vacation packages.</p>
+            <a href="#" class="btn-text">Learn More</a>
+          </div>
+          <a href="#" class="btn btn-purple">LEARN MORE</a>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-content">
-      <img src="logo.png" alt="Disney Logo Footer" class="footer-logo">
+      <img src="../images/logo.png" alt="Disney Logo Footer" class="footer-logo">
       <ul class="footer-links">
         <li><a href="#">Disney+</a></li>
         <li><a href="#">Privacy Policy</a></li>
