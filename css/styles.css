@@ -1,0 +1,485 @@
+/* ==========================================
+   1. Root Variables & Global Reset
+   ========================================== */
+:root {
+  --color-primary: #1a1d29;
+  --color-accent: #db5243;
+  --color-purple: #5c3b8a;
+  --color-dark-blue: #141824;
+  --color-light-bg: #f4f8fb;
+  --color-light-blue: #e3f4f8;
+  --color-white: #ffffff;
+  --color-dark: #111;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  line-height: 1.5;
+}
+
+/* ==========================================
+   2. Navbar Styles
+   ========================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.login-btn {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 0.4rem 1rem;
+  color: var(--color-white);
+  outline: none;
+  font-size: 0.85rem;
+}
+
+.search-input::placeholder {
+  color: #ddd;
+}
+
+/* ==========================================
+   3. Banner / Hero Section
+   ========================================== */
+.banner {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 4rem;
+  position: relative;
+}
+
+.banner-content {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.banner-title {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 900;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.banner-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--color-white);
+  backdrop-filter: blur(4px);
+}
+
+.btn-purple {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  display: inline-block;
+}
+
+/* ==========================================
+   4. Shop Section (Fondo Morado)
+   ========================================== */
+.shop-section {
+  background-color: #5c3b8a;
+  padding: 3rem 2rem;
+}
+
+.cards-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.shop-card {
+  background-color: #d1b878;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.shop-card h3 {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.shop-card p {
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  color: #111;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   5. Explore More Disney+ (Fondo Azul Oscuro)
+   ========================================== */
+.disney-plus-section {
+  background-color: var(--color-dark-blue);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.section-title.dark-text {
+  color: #222;
+}
+
+.cards-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card-wide {
+  background-color: #1f2535;
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.card-wide img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-wide-body {
+  padding: 1.2rem;
+}
+
+.card-wide-body h3 {
+  font-size: 1.1rem;
+  color: var(--color-white);
+  margin-bottom: 0.3rem;
+}
+
+.card-wide-body p {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.card-wide-body .card-link {
+  color: var(--color-white);
+}
+
+/* ==========================================
+   6. Coming Soon to Disney+ (5 Pósters Verticales)
+   ========================================== */
+.movies-section {
+  background-color: var(--color-light-bg);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.cards-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.movie-card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-bottom: 0.8rem;
+}
+
+.movie-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.3rem;
+}
+
+.movie-date {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* ==========================================
+   7. Vacation with Disney Parks
+   ========================================== */
+.parks-section {
+  background-color: var(--color-light-bg);
+  padding: 2rem 2rem 4rem 2rem;
+  text-align: center;
+}
+
+.cards-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.park-card {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.park-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.park-content {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+}
+
+.park-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.park-content p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.btn-text {
+  color: var(--color-white);
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   8. More / Credit Cards Section
+   ========================================== */
+.more-section {
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 2rem;
+  background-color: var(--color-light-blue);
+}
+
+.more-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.more-content {
+  padding-left: 2rem;
+}
+
+.more-content h2 {
+  font-size: 1.8rem;
+  color: #102a43;
+  margin-bottom: 1.5rem;
+}
+
+.offer-block {
+  margin-bottom: 1.5rem;
+}
+
+.offer-block h4 {
+  font-size: 0.95rem;
+  color: #102a43;
+  font-weight: 700;
+}
+
+.offer-block p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.offer-sub {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* ==========================================
+   9. Footer
+   ========================================== */
+footer {
+  background-color: #090b10;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: #8f9ba8;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.copyright {
+  color: #565d6d;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+}
